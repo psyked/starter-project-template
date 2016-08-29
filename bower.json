@@ -1,0 +1,22 @@
+{
+  "name": "project-template",
+  "description": "James's default starter project",
+  "main": "",
+  "authors": [
+    "James Ford <psyked84@gmail.com>  (http://psyked.co.uk/)"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}
