@@ -14,6 +14,23 @@ module.exports = function (grunt) {
                 }
             }
         },
+        
+        // post processing for css output files
+        postcss: {
+            options: {
+                map: true, // inline sourcemaps
+                processors: [
+                    require('autoprefixer')({
+                        browsers: 'last 2 versions' // add vendor prefixes
+                    }),
+                    require('cssnano')() // minify the result
+                ]
+            },
+            dist: {
+                src: 'dist/css/index.css',
+                dest: 'dist/css/index.min.css'
+            }
+        },
 
         rollup: {
             options: {
@@ -75,7 +92,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-rollup');
 
-    grunt.registerTask('default', ['sass', 'rollup', 'connect', 'watch']);
+    grunt.registerTask('default', ['sass', 'postcss', 'rollup', 'connect', 'watch']);
 };
