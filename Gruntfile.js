@@ -64,7 +64,8 @@ module.exports = function (grunt) {
                 options: {
                     port: 8080,
                     livereload: true,
-                    base: './'
+                    base: './',
+                    open: 'http://localhost:8080'
                 }
             }
         }
