@@ -35,18 +35,14 @@ module.exports = function (grunt) {
         rollup: {
             options: {
                 plugins: [
-                    babel({
-                        presets: ['es2015-rollup']
-                    })
+                    babel(),
                 ],
                 sourceMap: true
             },
             dist: {
                 options: {
                     plugins: [
-                        babel({
-                            presets: ['es2015-rollup']
-                        }),
+                        babel(),
                         uglify()
                     ]
                 },
