@@ -27,8 +27,8 @@ module.exports = function (grunt) {
                 ]
             },
             dist: {
-                src: 'dist/css/index.css',
-                dest: 'dist/css/index.min.css'
+                src: 'css/index.css',
+                dest: 'css/index.min.css'
             }
         },
 
